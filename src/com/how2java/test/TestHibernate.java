@@ -1,6 +1,7 @@
 package com.how2java.test;
 
 import java.util.List;
+import java.util.Set;
 
 import org.hibernate.Criteria;
 import org.hibernate.Query;
@@ -94,6 +95,7 @@ public class TestHibernate {
         }
         
         //多对一
+        //在这个测试例子中，增加了一个新的Category对象"c1" 并将其设置为id=8的product的category
         
         Category c2 =new Category();
         c2.setName("c1");
@@ -103,7 +105,13 @@ public class TestHibernate {
         p.setCategory(c2);
         s.update(p);
         
-        
+        //多对多
+        //首先获取id=1的category,然后通过getProducts() 直接取出其所对应的所有product
+        Category c3 = (Category) s.get(Category.class, 1);
+        Set<Product> ps3 = c3.getProducts();
+        for (Product p4 : ps) {
+            System.out.println(p.getName());
+        }
         
         s.getTransaction().commit();
         s.close();

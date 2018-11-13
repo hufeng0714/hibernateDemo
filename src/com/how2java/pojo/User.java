@@ -1,9 +1,12 @@
 package com.how2java.pojo;
-
+ 
 import java.util.Set;
-
-public class Category {
-
+ 
+public class User {
+ 
+    int id;
+    String name;
+    Set<Product> products;
     public int getId() {
         return id;
     }
@@ -16,10 +19,6 @@ public class Category {
     public void setName(String name) {
         this.name = name;
     }
-    int id;
-    String name;
-    
-    Set<Product> products;
     public Set<Product> getProducts() {
         return products;
     }

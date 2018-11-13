@@ -18,6 +18,7 @@
         <property name="hbm2ddl.auto">update</property>
         <mapping resource="com/how2java/pojo/Product.hbm.xml" />
         <mapping resource="com/how2java/pojo/Category.hbm.xml" />
+        <mapping resource="com/how2java/pojo/User.hbm.xml" />
     </session-factory>
  
 </hibernate-configuration>
