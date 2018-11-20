@@ -11,9 +11,12 @@
         </id>
         <property name="name" />
         <property name="price" />
+        <!-- 在Product.hbm.xml中设置Category 多对一关系 -->
         <many-to-one name="category" class="Category" column="cid" />
+        
         <set name="users" table="user_product" lazy="false">
             <key column="pid" />
+            <!-- 在Product.hbm.xml中设置Category 多对多关系 -->
             <many-to-many column="uid" class="User" />
         </set>   
     </class>

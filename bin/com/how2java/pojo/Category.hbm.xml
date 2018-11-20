@@ -10,8 +10,9 @@
             </generator>
         </id>
         <property name="name" />
-        
-        <set name="products" lazy="false">
+        <!-- 为Category.hbm.xml增加one-to-many映射 -->
+        <!--  lazy="true" 表示通过Category获取产品是延迟加载的,通常是false -->
+        <set name="products" lazy="true">
             <key column="cid" not-null="false" />
             <one-to-many class="Product" />
         </set>

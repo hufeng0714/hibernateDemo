@@ -17,7 +17,9 @@
         <property name="show_sql">true</property>
         <property name="hbm2ddl.auto">update</property>
         <mapping resource="com/how2java/pojo/Product.hbm.xml" />
+        <!-- 在hibernate.cfg.xml中增加Category的映射 -->
         <mapping resource="com/how2java/pojo/Category.hbm.xml" />
+        <!-- 在hibernate.cfg.xml中增加User的映射 -->
         <mapping resource="com/how2java/pojo/User.hbm.xml" />
     </session-factory>
  

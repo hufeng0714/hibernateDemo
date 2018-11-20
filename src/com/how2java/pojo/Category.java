@@ -19,6 +19,7 @@ public class Category {
     int id;
     String name;
     
+    //
     Set<Product> products;
     public Set<Product> getProducts() {
         return products;

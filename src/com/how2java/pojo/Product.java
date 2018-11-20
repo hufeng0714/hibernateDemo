@@ -7,8 +7,9 @@ public class Product {
     int id;
     String name;
     float price;
-    
+    //增加Category属性
     Category category;
+    //增加了对应Users的集合
     Set<User> users;
     
     public Set<User> getUsers() {
